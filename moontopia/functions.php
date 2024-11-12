@@ -128,14 +128,16 @@ moontopia_theme()
 			'width'       => 150,
 			'height'      => 70,
 		)
-	)
-	->register_menus(
-		array(
-			'header-menu' => esc_html__( 'Header Menu', 'moontopia' ),
-			'footer-menu' => esc_html__( 'Footer Menu', 'moontopia' ),
-		)
 	);
 
+add_action('after_setup_theme', function() {
+    moontopia_theme()->register_menus(
+        array(
+            'header-menu' => esc_html__( 'Header Menu', 'moontopia' ),
+            'footer-menu' => esc_html__( 'Footer Menu', 'moontopia' ),
+        )
+    );
+},1);
 if ( ! apply_filters( 'kubio_is_enabled', false ) ) {
 	moontopia_assets()
 		->registerTemplateScript(

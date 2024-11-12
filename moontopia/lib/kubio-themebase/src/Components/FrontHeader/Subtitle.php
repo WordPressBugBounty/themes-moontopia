@@ -46,7 +46,7 @@ class Subtitle extends \ColibriWP\Theme\Components\FrontHeader\Subtitle {
 
 				),
 				"{$prefix}localProps.content" => array(
-					'default' => Defaults::get( 'lorem_ipsum' ),
+					'default' =>__('Immerse your website in the enchanting world of Moontopia, a WordPress theme with the most vibrant blue and purple hues, creating a mesmerizing, otherworldly experience.', 'moontopia'),
 					'control' => array(
 						'label'       => Translations::get( 'subtitle' ),
 						'type'        => 'input',

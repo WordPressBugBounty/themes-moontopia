@@ -241,11 +241,11 @@ $moontopia_gradients                     = array(
 		),
 
 );
-$moontopia_theme_action_button           = __( 'Get in control', 'moontopia' );
-$moontopia_theme_action_button_secondary = __( 'Contact us', 'moontopia' );
+$moontopia_theme_action_button           = 'Get in control';
+$moontopia_theme_action_button_secondary = 'Contact us';
 
-$moontopia_theme_click_pen_to_edit_title = __( 'Elevate Your Brand', 'moontopia' );
-$moontopia_lorem_ipsum                   = __('Immerse your website in the enchanting world of Moontopia, a WordPress theme with the most vibrant blue and purple hues, creating a mesmerizing, otherworldly experience.', 'moontopia');
+$moontopia_theme_click_pen_to_edit_title ='Elevate Your Brand';
+$moontopia_lorem_ipsum                   = 'Immerse your website in the enchanting world of Moontopia, a WordPress theme with the most vibrant blue and purple hues, creating a mesmerizing, otherworldly experience.';
 
 
 return array(
@@ -709,30 +709,4 @@ return array(
 	'blog_show_post_thumb_placeholder'  => true,
 	'blog_posts_per_row'                => 2,
 	'blog_enable_masonry'               => true,
-
-	'front_page_designs'                => array(
-		array(
-			'name'    => __( 'Modern', 'vertice' ),
-			'index'   => 1,
-			'preview' => 'front-page-1.jpg',
-		),
-
-		array(
-			'name'    => __( 'Fullscreen', 'vertice' ),
-			'index'   => 2,
-			'preview' => 'front-page-2.jpg',
-		),
-
-		array(
-			'name'    => __( 'Classic', 'vertice' ),
-			'index'   => 3,
-			'preview' => 'front-page-3.jpg',
-		),
-
-		array(
-			'name'    => __( '', 'vertice' ),
-			'index'   => 4,
-			'preview' => 'admin/ai-icon.svg',
-		),
-	),
 );

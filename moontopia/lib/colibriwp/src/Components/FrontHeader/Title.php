@@ -43,7 +43,7 @@ class Title extends ComponentBase {
 
 				),
 				"{$prefix}localProps.content" => array(
-					'default' => Defaults::get( 'edit_this_text_in_customizer' ),
+					'default' => __( 'Elevate Your Brand', 'moontopia' ),
 					'control' => array(
 						'label'       => Translations::get( 'title' ),
 						'type'        => 'input',

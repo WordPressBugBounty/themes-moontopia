@@ -1000,7 +1000,7 @@
       'front-header.hero.full_height' => true,
       'front-header.hero.style.descendants.outer.background.color' => 'rgba(130,75,69,0.5)',
       'front-header.hero.style.descendants.outer.background.type' => 'color',
-      'front-header.hero.style.descendants.outer.background.image.0.source.url' => '%s/images/hero-1.jpeg',
+      'front-header.hero.style.descendants.outer.background.image.0.source.url' => '%s/../images/background-image.jpg',
       'front-header.hero.style.descendants.outer.background.image.0.position' => 'center center',
       'front-header.hero.style.descendants.outer.background.image.0.attachment' => 'scroll',
       'front-header.hero.style.descendants.outer.background.image.0.repeat' => 'no-repeat',

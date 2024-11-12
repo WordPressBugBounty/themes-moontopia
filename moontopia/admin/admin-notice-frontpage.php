@@ -45,7 +45,34 @@ wp_localize_script(
 	</div>
 	<div class="content-holder">
 		<ul class="predefined-front-pages">
-			<?php foreach ( \ColibriWP\Theme\Defaults::get( 'front_page_designs' ) as $moontopia_design_index => $design ) : ?>
+			<?php
+            $front_page_designs = array(
+                array(
+                    'name'    => __( 'Modern', 'vertice' ),
+                    'index'   => 1,
+                    'preview' => 'front-page-1.jpg',
+                ),
+
+                array(
+                    'name'    => __( 'Fullscreen', 'vertice' ),
+                    'index'   => 2,
+                    'preview' => 'front-page-2.jpg',
+                ),
+
+                array(
+                    'name'    => __( 'Classic', 'vertice' ),
+                    'index'   => 3,
+                    'preview' => 'front-page-3.jpg',
+                ),
+
+                array(
+                    'name'    => __( '', 'vertice' ),
+                    'index'   => 4,
+                    'preview' => 'admin/ai-icon.svg',
+                ),
+            );
+
+            foreach ( $front_page_designs as $moontopia_design_index => $design ) : ?>
 				<?php
 					$moontopia_design_selected = $moontopia_design_index === 0 ? 'selected' : '';
 					$preview_image_name      = isset( $design['preview'] ) ? $design['preview'] : "front-page-{$design['index']}.png";
