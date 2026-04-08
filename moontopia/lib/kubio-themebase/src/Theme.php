@@ -7,6 +7,7 @@ use ColibriWP\Theme\Defaults;
 use ColibriWP\Theme\Theme as ThemeBase;
 use ColibriWP\Theme\View;
 use ColibriWP\Theme\Translations;
+use MoontopiaTheme\SiteLeadsThemeKit\SiteLeads;
 
 class Theme extends ThemeBase {
 
@@ -88,7 +89,7 @@ class Theme extends ThemeBase {
 
         if ( $this->shouldDisplayAdminNotice() ) :
             ?>
-            <div class="notice notice-success is-dismissible moontopia-admin-big-notice notice-large">
+            <div class="kubio-notice notice notice-success is-dismissible moontopia-admin-big-notice notice-large">
                 <?php View::make( 'admin/admin-notice-frontpage' ); ?>
             </div>
             <script>
@@ -210,7 +211,9 @@ class Theme extends ThemeBase {
                             </button>
                         </div>
 
-                        <p><?php Translations::escHtmlE( 'themebase_step2_footer_info' ); ?></p>
+                        <div>
+                            <?php echo SiteLeads::getInstallCompanioNoticeDescriptionInWPAdminWithSiteLeadsCheck() // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
+                        </div>
 
                     </div>
 
@@ -239,7 +242,7 @@ class Theme extends ThemeBase {
 
 		foreach ( $default_keys as $default_key ) {
 			foreach ( $mods_keys as $mod_key ) {
-				if ( in_array( $mod_key, $default_blog_keys) || strpos( $mod_key, "{$default_key}." ) === 0 ) {
+                if ( in_array( $mod_key, $default_blog_keys, true ) || strpos( $mod_key, "{$default_key}." ) === 0 ) {
 					Flags::set( 'theme_customized', true );
 
 					return true;
